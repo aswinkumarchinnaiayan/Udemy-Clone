@@ -1,0 +1,234 @@
+body{
+    font-family: "Gabarito", sans-serif;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 1px;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+    gap: 10px;
+}
+.nav_title{
+    color: #b004c3e1;;
+    cursor: pointer;
+}
+.nav_search{
+    display: flex;
+    border: solid black 1px;
+    border-radius: 30px;
+    width: 60%;
+    padding: 15px;
+    gap: 10px;
+}
+.nav_search input{
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+}
+.nav_search input:focus{
+    outline: none;
+}
+.nav_links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+.nav_links p, i{
+    cursor: pointer;
+}
+.nav_ml{
+    position: relative;
+    cursor: pointer;
+}
+.nav_ml_popup{
+    border: solid black 1px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    padding: 10px;
+    width: 100px;
+    top: 50px;
+    display: none;
+}
+.nav_ml:hover .nav_ml_popup{
+    display: block;
+}
+.nav_links_menubar{
+    display: none;
+}
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: solid black 1px;
+}
+.categories p{
+    border: solid  #b004c3e1 1px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #b004c3e1;
+    color: white;
+    cursor: pointer;
+}
+.categories p:hover{
+    transition: 1s;
+    background-color: white;
+    color: #b004c3e1;
+}
+.adv_image{
+    position: relative;
+}
+.adv_image img{
+    width: 100%;
+}
+.adv_image_offer{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    border: solid black 1px;
+    background-color: white;
+    color: black;
+    padding: 2%;
+    width: 30%;
+    animation-name: zoom;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.recom_title{
+    padding: 10px;
+    cursor: default;
+}
+.recom_course{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.course1{
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+}
+.course1 img{
+    width:100%;
+    height: 60%;
+    border-radius: 10px;
+    border: solid  grey 1px;
+    cursor: pointer;
+}
+.recom_topic{
+    padding: 10px;
+    cursor: default;
+}
+.topic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+.topic p{
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 25%;
+    flex-grow: 1;
+    padding: 20px;
+    cursor: pointer;
+}
+.topic p:hover{
+    background-color: black;
+    color: white;
+}
+.most_popular_title{
+    padding: 10px;
+    cursor: default;
+}
+.most_popular{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.contact_form{
+    background-color: black;
+    color: grey;
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    gap: 20px;
+}
+.contact_form p{
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+}
+.contact_form p:hover{
+    color: white;
+}
+.end{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.end h1{
+    cursor: default;
+}
+.end h1 ,.p{
+    margin-top: 10px;
+    padding: 5px;
+}
+.end p{
+    cursor: pointer;
+}
+.end p:hover{
+    color: orange;
+}
+/* Media Queries*/
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }   
+    .nav_search input{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px) {
+    .course1{
+        flex-basis: 40%;
+    }   
+    .categories{
+        display: none;
+    }
+    .nav_links,.nav_search{
+        display: none;
+    }
+    .nav_links_menubar{
+        display: block;
+    }
+}
