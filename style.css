@@ -231,4 +231,8 @@ body{
     .nav_links_menubar{
         display: block;
     }
+    .topic p:hover{
+    background-color: black;
+    color: white;
+}
 }
