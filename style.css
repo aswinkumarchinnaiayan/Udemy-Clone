@@ -237,6 +237,15 @@ body{
     .nav_links_menubar{
         display: block;
     }
+    .recom_title{
+        margin-top: 10px;
+    }
+    .recom_topic{
+        margin-top: 10px;
+    }
+    .most_popular_title{
+        margin-top: 10px;
+    }
     .topic p{
         border: solid black 1px;
         border-radius: 10px;
